@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Available Routes
 app.use('/api/auth',require('./routes/auth'))
 app.use('/api/notes',require('./routes/notes'))
+app.get('/test',(req,res)=>{
+  res.send("Testing Mode")
+})
 
 app.listen(process.env.PORT, () => {
   console.log(`iNoteBook Backend listening on port ${process.env.PORT}`)
